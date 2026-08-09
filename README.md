@@ -42,13 +42,9 @@
 
 <br/>
 
+<div align="center">
 <table>
 <tr>
-<td align="center" width="50%">
-
-<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="90%" alt="Coding GIF" />
-
-</td>
 <td width="50%">
 
 ```js
@@ -67,24 +63,14 @@ const fito = {
 ```
 
 </td>
-</tr>
-<tr>
 <td align="center" width="50%">
 
-<a href="mailto:fitordf@gmail.com">
-  <img src="https://img.shields.io/badge/Email-fitordf@gmail.com-22C55E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B1120" />
-</a>
-
-</td>
-<td align="center" width="50%">
-
-<a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/">
-  <img src="https://img.shields.io/badge/LinkedIn-Fito_Rifqi-22C55E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B1120" />
-</a>
+<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="85%" alt="Coding GIF" />
 
 </td>
 </tr>
 </table>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🏆 TROPHIES                                               -->
@@ -130,6 +116,7 @@ const fito = {
 
 <br/>
 
+<div align="center">
 <table>
 <tr>
 <td align="center" width="50%">
@@ -160,6 +147,7 @@ const fito = {
 </td>
 </tr>
 </table>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📊 GITHUB STATS                                           -->
@@ -253,19 +241,33 @@ const fito = {
 
 <br/>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-22C55E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B1120" alt="LinkedIn" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="mailto:fitordf@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-22C55E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B1120" alt="Email" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/onlydayone" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-22C55E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1120" alt="GitHub" />
-  </a>
-</p>
+<div align="center">
+<table>
+<tr>
+<td align="center" width="33%">
+<a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/" target="_blank">
+<img src="https://img.shields.io/badge/LinkedIn-22C55E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<br/><br/>
+<sub>Fito Rifqi</sub>
+</td>
+<td align="center" width="33%">
+<a href="mailto:fitordf@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-22C55E?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<br/><br/>
+<sub>fitordf@gmail.com</sub>
+</td>
+<td align="center" width="33%">
+<a href="https://github.com/onlydayone" target="_blank">
+<img src="https://img.shields.io/badge/GitHub-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<br/><br/>
+<sub>@onlydayone</sub>
+</td>
+</tr>
+</table>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🔚 FOOTER                                                 -->
