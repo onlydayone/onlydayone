@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1120,50:166534,100:22C55E&height=250&section=header&text=onlydayone&fontColor=ffffff&fontSize=60&fontAlignY=35&animation=twinkling" width="100%" alt="Header Banner" />
+  <img src="./assets/header-banner.png" width="100%" alt="Header Banner" />
 </p>
 
 <p align="center">
@@ -12,7 +12,6 @@
   </a>
 </p>
 
-<!-- Badges -->
 <p align="center">
   <a href="https://github.com/onlydayone">
     <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=22C55E&style=for-the-badge" alt="Profile views" />
@@ -27,9 +26,6 @@
   </a>
 </p>
 
-<br/>
-
-<!-- Current Focus -->
 <p align="center">
   <img src="https://img.shields.io/badge/🎯_Focus-SkillBantuin_App-22C55E?style=for-the-badge&labelColor=0B1120" alt="Focus" />
   <img src="https://img.shields.io/badge/🔨_Building-JavaLan_Messenger-22C55E?style=for-the-badge&labelColor=0B1120" alt="Building" />
@@ -46,13 +42,14 @@
 
 <br/>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="280" alt="Coding GIF" />
-</p>
+<table>
+<tr>
+<td align="center" width="50%">
 
-<br/>
+<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="90%" alt="Coding GIF" />
 
-<div align="center">
+</td>
+<td width="50%">
 
 ```js
 const fito = {
@@ -60,28 +57,34 @@ const fito = {
     alias: "onlydayone",
     role: "Mobile & Web Developer",
     location: "Indonesia 🇮🇩",
-
-    currentFocus: ["SkillBantuin App", "JavaLan Messenger"],
-    learning: ["Flutter", "Dart", "IoT (Arduino)", "Odoo ERP"],
-    interests: ["Web Dev", "Mobile Apps", "Backend", "Beautiful UI/UX"],
-
-    motto: "Belajar sambil bikin project 🚀"
+    focus: ["SkillBantuin", "JavaLan"],
+    learning: ["Flutter", "Dart",
+               "IoT", "Odoo ERP"],
+    interests: ["Web Dev", "Mobile",
+                "Backend", "UI/UX"],
+    motto: "Build, learn, repeat 🚀"
 };
 ```
 
-</div>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
 
-<br/>
+<a href="mailto:fitordf@gmail.com">
+  <img src="https://img.shields.io/badge/Email-fitordf@gmail.com-22C55E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B1120" />
+</a>
 
-<p align="center">
-  <a href="mailto:fitordf@gmail.com">
-    <img src="https://img.shields.io/badge/-fitordf@gmail.com-0B1120?style=for-the-badge&logo=gmail&logoColor=22C55E" />
-  </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/">
-    <img src="https://img.shields.io/badge/-LinkedIn-0B1120?style=for-the-badge&logo=linkedin&logoColor=22C55E" />
-  </a>
-</p>
+</td>
+<td align="center" width="50%">
+
+<a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/">
+  <img src="https://img.shields.io/badge/LinkedIn-Fito_Rifqi-22C55E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B1120" />
+</a>
+
+</td>
+</tr>
+</table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🏆 TROPHIES                                               -->
@@ -110,31 +113,12 @@ const fito = {
 <p align="center">
   <img src="https://skillicons.dev/icons?i=flutter,dart,java,html,css,js,cpp,arduino&theme=dark" alt="Languages" />
 </p>
-<p align="center"><em>Languages & Frameworks</em></p>
-
-<br/>
+<p align="center"><sub>Languages & Frameworks</sub></p>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=mysql,postgresql,git,github,vscode,firebase&theme=dark" alt="Tools" />
 </p>
-<p align="center"><em>Databases & Tools</em></p>
-
-<br/>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-0B1120?style=for-the-badge&logo=flutter&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/Dart-0B1120?style=for-the-badge&logo=dart&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/Java-0B1120?style=for-the-badge&logo=openjdk&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/JavaScript-0B1120?style=for-the-badge&logo=javascript&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/C++-0B1120?style=for-the-badge&logo=cplusplus&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/HTML5-0B1120?style=for-the-badge&logo=html5&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/CSS3-0B1120?style=for-the-badge&logo=css3&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/Arduino-0B1120?style=for-the-badge&logo=arduino&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/MySQL-0B1120?style=for-the-badge&logo=mysql&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/PostgreSQL-0B1120?style=for-the-badge&logo=postgresql&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/Git-0B1120?style=for-the-badge&logo=git&logoColor=22C55E" />
-  <img src="https://img.shields.io/badge/VS_Code-0B1120?style=for-the-badge&logo=visualstudiocode&logoColor=22C55E" />
-</p>
+<p align="center"><sub>Databases & Tools</sub></p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🚧 PROJECTS                                               -->
@@ -146,20 +130,36 @@ const fito = {
 
 <br/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/📱_SkillBantuin-Micro--volunteering_app_·_Flutter,_Dart-22C55E?style=for-the-badge&labelColor=0B1120" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/🎵_Music_IoT_Visualizer-Arduino_dashboard_·_HTML,_JS,_C++-22C55E?style=for-the-badge&labelColor=0B1120" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/📊_Odoo_Tracking-ERP_module_exploration_·_Odoo,_JS-22C55E?style=for-the-badge&labelColor=0B1120" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/💬_JavaLan_Messenger-Messenger_app_fundamental_·_Java-22C55E?style=for-the-badge&labelColor=0B1120" />
-</p>
-
-<br/>
+<table>
+<tr>
+<td align="center" width="50%">
+<h3>📱 SkillBantuin</h3>
+<p>Aplikasi <em>micro-volunteering</em> berbasis skill</p>
+<img src="https://img.shields.io/badge/Flutter-22C55E?style=flat-square&logo=flutter&logoColor=white" />
+<img src="https://img.shields.io/badge/Dart-22C55E?style=flat-square&logo=dart&logoColor=white" />
+</td>
+<td align="center" width="50%">
+<h3>🎵 Music IoT Visualizer</h3>
+<p>Dashboard Arduino & Apple Music visualizer</p>
+<img src="https://img.shields.io/badge/HTML-22C55E?style=flat-square&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/JS-22C55E?style=flat-square&logo=javascript&logoColor=white" />
+<img src="https://img.shields.io/badge/C++-22C55E?style=flat-square&logo=cplusplus&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<h3>📊 Odoo Tracking</h3>
+<p>Modul tracking & manajemen ERP</p>
+<img src="https://img.shields.io/badge/Odoo-22C55E?style=flat-square&logo=odoo&logoColor=white" />
+<img src="https://img.shields.io/badge/JS-22C55E?style=flat-square&logo=javascript&logoColor=white" />
+</td>
+<td align="center" width="50%">
+<h3>💬 JavaLan Messenger</h3>
+<p>Messenger app untuk logika pemrograman</p>
+<img src="https://img.shields.io/badge/Java-22C55E?style=flat-square&logo=openjdk&logoColor=white" />
+</td>
+</tr>
+</table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📊 GITHUB STATS                                           -->
@@ -171,34 +171,28 @@ const fito = {
 
 <br/>
 
-<!-- Profile Details -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/0-profile-details.svg" width="100%" alt="Profile Details" />
 </p>
 
-<!-- Stats Cards — 2 per row, same size -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/1-repos-per-language.svg" width="49%" alt="Repos per Language" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/2-most-commit-language.svg" width="49%" alt="Most Commit Language" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/3-stats.svg" width="49%" alt="Stats" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/4-productive-time.svg" width="49%" alt="Productive Time" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/3-stats.svg" width="49%" alt="Stats" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/4-productive-time.svg" width="49%" alt="Productive Time" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/1-repos-per-language.svg" width="49%" alt="Repos per Language" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/2-most-commit-language.svg" width="49%" alt="Most Commit Language" />
 </p>
 
 <br/>
 
-<!-- Streak Stats -->
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=22C55E&currStreakLabel=22C55E&currStreakNum=22C55E&sideNums=22C55E&sideLabels=22C55E&dates=22C55E" width="100%" alt="GitHub Streak" />
 </p>
 
 <br/>
 
-<!-- Languages Stats -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/languages-stats.svg" alt="Most Used Languages" />
 </p>
@@ -261,30 +255,24 @@ const fito = {
 
 <p align="center">
   <a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0B1120?style=for-the-badge&logo=linkedin&logoColor=22C55E" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-22C55E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B1120" alt="LinkedIn" />
   </a>
   &nbsp;&nbsp;
   <a href="mailto:fitordf@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-0B1120?style=for-the-badge&logo=gmail&logoColor=22C55E" alt="Email" />
+    <img src="https://img.shields.io/badge/Gmail-22C55E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B1120" alt="Email" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/onlydayone" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-0B1120?style=for-the-badge&logo=github&logoColor=22C55E" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-22C55E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1120" alt="GitHub" />
   </a>
 </p>
-
-<br/>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🔚 FOOTER                                                 -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-<p align="center">
-  <em>"Saya masih belajar, masih membangun, dan akan terus berkembang."</em>
-</p>
-
 <br/>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22C55E,50:166534,100:0B1120&height=120&section=footer&animation=twinkling" width="100%" alt="Footer Banner" />
+  <img src="./assets/footer-banner.png" width="100%" alt="Footer Banner" />
 </p>
