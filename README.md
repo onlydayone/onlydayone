@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/onlydayone">
-    <img src="https://komarev.com/ghpvc/?username=onlydayone&label=Profile%20views&color=16A34A&style=flat-square" alt="Profile views" />
+    <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=16A34A&style=flat-square" alt="Profile views" />
   </a>
   <a href="mailto:fitordf@gmail.com">
     <img src="https://img.shields.io/badge/Email-fitordf%40gmail.com-15803D?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
