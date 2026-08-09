@@ -8,12 +8,6 @@
 
 <p align="center">
   <a href="https://github.com/onlydayone">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=22C55E&center=true&vCenter=true&repeat=true&width=700&height=45&lines=%F0%9F%91%8B+Halo%2C+saya+Fito+Rifqi+Dwi+Fatoni;%F0%9F%9A%80+Building+things+that+matter;%F0%9F%92%A1+Turning+ideas+into+code;%F0%9F%8C%B1+Always+learning%2C+always+growing" alt="Typing Animation" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/onlydayone">
     <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=22C55E&style=for-the-badge" alt="Profile views" />
   </a>
   &nbsp;
