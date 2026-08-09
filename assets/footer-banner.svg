@@ -60,7 +60,7 @@
 <text x="450" y="100" text-anchor="middle" class="quote">"Saya masih belajar, masih membangun, dan akan terus berkembang."</text>
 
 <!-- Credit line -->
-<text x="450" y="140" text-anchor="middle" class="credit">— ONLYDAYONE —</text>
+<text x="450" y="140" text-anchor="middle" class="credit">— FITO RIFQI —</text>
 
 <!-- Trace border -->
 <rect class="trace" x="3" y="3" width="894" height="174" rx="16" stroke="#22C55E"/>
