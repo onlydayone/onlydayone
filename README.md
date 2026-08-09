@@ -15,11 +15,11 @@
 <!-- Badges -->
 <p align="center">
   <a href="https://github.com/onlydayone">
-    <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=16A34A&style=for-the-badge" alt="Profile views" />
+    <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=22C55E&style=for-the-badge" alt="Profile views" />
   </a>
   &nbsp;
   <a href="https://github.com/onlydayone?tab=followers">
-    <img src="https://img.shields.io/github/followers/onlydayone?label=Followers&style=for-the-badge&color=166534&labelColor=0B1120&logo=github" alt="Followers" />
+    <img src="https://img.shields.io/github/followers/onlydayone?label=Followers&style=for-the-badge&color=22C55E&labelColor=0B1120&logo=github" alt="Followers" />
   </a>
   &nbsp;
   <a href="https://github.com/onlydayone?tab=repositories">
@@ -31,9 +31,9 @@
 
 <!-- Current Focus -->
 <p align="center">
-  <img src="https://img.shields.io/badge/🎯_Focus-SkillBantuin_App-166534?style=for-the-badge&labelColor=0B1120" alt="Focus" />
+  <img src="https://img.shields.io/badge/🎯_Focus-SkillBantuin_App-22C55E?style=for-the-badge&labelColor=0B1120" alt="Focus" />
   <img src="https://img.shields.io/badge/🔨_Building-JavaLan_Messenger-22C55E?style=for-the-badge&labelColor=0B1120" alt="Building" />
-  <img src="https://img.shields.io/badge/🔬_Exploring-IoT_&_Arduino-15803D?style=for-the-badge&labelColor=0B1120" alt="Exploring" />
+  <img src="https://img.shields.io/badge/🔬_Exploring-IoT_&_Arduino-22C55E?style=for-the-badge&labelColor=0B1120" alt="Exploring" />
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -44,9 +44,15 @@
 
 <h2> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> &nbsp;Tentang Saya</h2>
 
-<table>
-<tr>
-<td width="55%">
+<br/>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="280" alt="Coding GIF" />
+</p>
+
+<br/>
+
+<div align="center">
 
 ```js
 const fito = {
@@ -55,45 +61,27 @@ const fito = {
     role: "Mobile & Web Developer",
     location: "Indonesia 🇮🇩",
 
-    currentFocus: [
-        "SkillBantuin App",
-        "JavaLan Messenger"
-    ],
-
-    learning: [
-        "Flutter", "Dart",
-        "IoT (Arduino)", "Odoo ERP"
-    ],
-
-    interests: [
-        "Web Development",
-        "Mobile Apps",
-        "Backend Systems",
-        "Beautiful UI/UX"
-    ],
+    currentFocus: ["SkillBantuin App", "JavaLan Messenger"],
+    learning: ["Flutter", "Dart", "IoT (Arduino)", "Odoo ERP"],
+    interests: ["Web Dev", "Mobile Apps", "Backend", "Beautiful UI/UX"],
 
     motto: "Belajar sambil bikin project 🚀"
 };
 ```
 
-</td>
-<td width="45%" align="center">
+</div>
 
-<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="100%" alt="Coding GIF" />
-
-<br/><br/>
-
-<a href="mailto:fitordf@gmail.com">
-  <img src="https://img.shields.io/badge/-fitordf@gmail.com-0B1120?style=for-the-badge&logo=gmail&logoColor=22C55E" />
-</a>
 <br/>
-<a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/">
-  <img src="https://img.shields.io/badge/-LinkedIn-0B1120?style=for-the-badge&logo=linkedin&logoColor=22C55E" />
-</a>
 
-</td>
-</tr>
-</table>
+<p align="center">
+  <a href="mailto:fitordf@gmail.com">
+    <img src="https://img.shields.io/badge/-fitordf@gmail.com-0B1120?style=for-the-badge&logo=gmail&logoColor=22C55E" />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/">
+    <img src="https://img.shields.io/badge/-LinkedIn-0B1120?style=for-the-badge&logo=linkedin&logoColor=22C55E" />
+  </a>
+</p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🏆 TROPHIES                                               -->
@@ -133,7 +121,6 @@ const fito = {
 
 <br/>
 
-<!-- Tech badges with animation feel -->
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-0B1120?style=for-the-badge&logo=flutter&logoColor=22C55E" />
   <img src="https://img.shields.io/badge/Dart-0B1120?style=for-the-badge&logo=dart&logoColor=22C55E" />
@@ -159,44 +146,18 @@ const fito = {
 
 <br/>
 
-<table>
-<tr>
-<td align="center" width="50%">
-<h3>📱 SkillBantuin</h3>
-<br/>
-<img src="https://img.shields.io/badge/Flutter-166534?style=flat-square&logo=flutter&logoColor=white" />
-<img src="https://img.shields.io/badge/Dart-166534?style=flat-square&logo=dart&logoColor=white" />
-<br/><br/>
-<em>Aplikasi micro-volunteering berbasis skill dengan fitur chat, pembayaran, dan rating</em>
-</td>
-<td align="center" width="50%">
-<h3>🎵 Music IoT Visualizer</h3>
-<br/>
-<img src="https://img.shields.io/badge/HTML-166534?style=flat-square&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/JS-166534?style=flat-square&logo=javascript&logoColor=white" />
-<img src="https://img.shields.io/badge/C++-166534?style=flat-square&logo=cplusplus&logoColor=white" />
-<br/><br/>
-<em>Dashboard Arduino & web terhubung ke Apple Music dengan audio visualizer</em>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-<h3>📊 Odoo Tracking</h3>
-<br/>
-<img src="https://img.shields.io/badge/Odoo-166534?style=flat-square&logo=odoo&logoColor=white" />
-<img src="https://img.shields.io/badge/JS-166534?style=flat-square&logo=javascript&logoColor=white" />
-<br/><br/>
-<em>Eksplorasi modul tracking & manajemen sistem enterprise (ERP)</em>
-</td>
-<td align="center" width="50%">
-<h3>💬 JavaLan Messenger</h3>
-<br/>
-<img src="https://img.shields.io/badge/Java-166534?style=flat-square&logo=openjdk&logoColor=white" />
-<br/><br/>
-<em>Aplikasi messenger untuk melatih logika pemrograman fundamental</em>
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="https://img.shields.io/badge/📱_SkillBantuin-Micro--volunteering_app_·_Flutter,_Dart-22C55E?style=for-the-badge&labelColor=0B1120" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/🎵_Music_IoT_Visualizer-Arduino_dashboard_·_HTML,_JS,_C++-22C55E?style=for-the-badge&labelColor=0B1120" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/📊_Odoo_Tracking-ERP_module_exploration_·_Odoo,_JS-22C55E?style=for-the-badge&labelColor=0B1120" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/💬_JavaLan_Messenger-Messenger_app_fundamental_·_Java-22C55E?style=for-the-badge&labelColor=0B1120" />
+</p>
 
 <br/>
 
@@ -210,35 +171,34 @@ const fito = {
 
 <br/>
 
-<!-- Profile Details - Full Width -->
+<!-- Profile Details -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/0-profile-details.svg" width="100%" alt="Profile Details" />
 </p>
 
-<!-- Stats Cards Side by Side -->
+<!-- Stats Cards — 2 per row, same size -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/1-repos-per-language.svg" width="32%" alt="Repos per Language" />
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/2-most-commit-language.svg" width="32%" alt="Most Commit Language" />
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/3-stats.svg" width="32%" alt="Stats" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/1-repos-per-language.svg" width="49%" alt="Repos per Language" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/2-most-commit-language.svg" width="49%" alt="Most Commit Language" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/3-stats.svg" width="49%" alt="Stats" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/4-productive-time.svg" width="49%" alt="Productive Time" />
 </p>
 
 <br/>
 
 <!-- Streak Stats -->
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=A7F3D0&currStreakLabel=22C55E&currStreakNum=ffffff&sideNums=ffffff&sideLabels=A7F3D0&dates=4B5563" height="180" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=22C55E&currStreakLabel=22C55E&currStreakNum=22C55E&sideNums=22C55E&sideLabels=22C55E&dates=22C55E" width="100%" alt="GitHub Streak" />
 </p>
 
 <br/>
 
-<!-- Productive Time -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/4-productive-time.svg" width="50%" alt="Productive Time" />
-</p>
-
-<br/>
-
-<!-- Languages Stats (from lowlighter/metrics) -->
+<!-- Languages Stats -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/languages-stats.svg" alt="Most Used Languages" />
 </p>
@@ -255,7 +215,7 @@ const fito = {
 
 <p align="center">
   <a href="https://github.com/onlydayone">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=onlydayone&bg_color=0B1120&color=A7F3D0&line=22C55E&point=ffffff&area=true&area_color=166534&hide_border=true&title_color=22C55E" width="100%" alt="Activity Graph" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=onlydayone&bg_color=0B1120&color=22C55E&line=22C55E&point=22C55E&area=true&area_color=22C55E&hide_border=true&title_color=22C55E" width="100%" alt="Activity Graph" />
   </a>
 </p>
 
@@ -277,8 +237,6 @@ const fito = {
   </picture>
 </p>
 
-<p align="center"><sub>⚡ Snake akan muncul setelah GitHub Actions workflow pertama kali berjalan</sub></p>
-
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 🧊 3D CONTRIBUTION GRAPH                                  -->
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -290,8 +248,6 @@ const fito = {
 <p align="center">
   <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="3D Contribution Graph" />
 </p>
-
-<p align="center"><sub>⚡ 3D Graph akan muncul setelah GitHub Actions workflow pertama kali berjalan</sub></p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📫 CONTACT                                                -->
@@ -323,15 +279,9 @@ const fito = {
 <!-- 🔚 FOOTER                                                 -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-<div align="center">
-  
-> *"Saya masih belajar, masih membangun, dan akan terus berkembang."*
-
-<br/>
-
-<img src="https://img.shields.io/badge/Made_with-❤️-22C55E?style=for-the-badge&labelColor=0B1120" />
-
-</div>
+<p align="center">
+  <em>"Saya masih belajar, masih membangun, dan akan terus berkembang."</em>
+</p>
 
 <br/>
 
