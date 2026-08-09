@@ -72,9 +72,9 @@
 <rect x="0" y="0" width="900" height="40" fill="url(#scanGrad)" style="animation: scan 6s linear infinite;"/>
 
 <!-- Name with glow + glitch -->
-<text x="450" y="110" text-anchor="middle" class="name" filter="url(#softglow)">ONLYDAYONE</text>
-<text x="447" y="110" text-anchor="middle" class="name" fill="#22C55E" style="animation: glitch 7s infinite;">ONLYDAYONE</text>
-<text x="453" y="110" text-anchor="middle" class="name" fill="#166534" style="animation: glitch 7s infinite .1s;">ONLYDAYONE</text>
+<text x="450" y="110" text-anchor="middle" class="name" filter="url(#softglow)">FITO RIFQI</text>
+<text x="447" y="110" text-anchor="middle" class="name" fill="#22C55E" style="animation: glitch 7s infinite;">FITO RIFQI</text>
+<text x="453" y="110" text-anchor="middle" class="name" fill="#166534" style="animation: glitch 7s infinite .1s;">FITO RIFQI</text>
 
 <!-- Subtitle -->
 <text x="450" y="148" text-anchor="middle" class="sub">MOBILE &amp; WEB DEVELOPER · IOT EXPLORER · LIFELONG LEARNER</text>
