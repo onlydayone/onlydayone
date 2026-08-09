@@ -28,7 +28,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }} # Mengambil token yang tadi dibuat
-          user: FitoRifqi
+          user: onlydayone
           template: classic
           base: ""
           config_timezone: Asia/Jakarta
