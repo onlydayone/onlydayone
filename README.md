@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/FitoRifqi">
-    <img src="https://komarev.com/ghpvc/?username=FitoRifqi&label=Profile%20views&color=16A34A&style=flat-square" alt="Profile views" />
+  <a href="https://github.com/onlydayone">
+    <img src="https://komarev.com/ghpvc/?username=onlydayone&label=Profile%20views&color=16A34A&style=flat-square" alt="Profile views" />
   </a>
   <a href="mailto:fitordf@gmail.com">
     <img src="https://img.shields.io/badge/Email-fitordf%40gmail.com-15803D?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
@@ -72,15 +72,15 @@
 ## Statistik GitHub
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FitoRifqi/FitoRifqi/main/profile-summary-card-output/dark/3-stats.svg" alt="GitHub Stats" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/3-stats.svg" alt="GitHub Stats" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=FitoRifqi&hide_border=true&background=0B1120&ring=22C55E&fire=A7F3D0&currStreakLabel=22C55E&currStreakNum=ffffff&sideNums=ffffff&sideLabels=A7F3D0" height="165" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=A7F3D0&currStreakLabel=22C55E&currStreakNum=ffffff&sideNums=ffffff&sideLabels=A7F3D0" height="165" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FitoRifqi/FitoRifqi/main/profile-summary-card-output/dark/0-profile-details.svg" alt="Profile Details" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/0-profile-details.svg" alt="Profile Details" />
 </p>
 
 ---
@@ -88,7 +88,7 @@
 ## Bahasa yang Sering Saya Pakai
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FitoRifqi/FitoRifqi/main/languages-stats.svg" alt="Most Used Languages" />
+  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/languages-stats.svg" alt="Most Used Languages" />
 </p>
 
 ---
@@ -104,7 +104,7 @@
   <a href="mailto:fitordf@gmail.com">
     <img alt="Email" src="https://img.shields.io/badge/-Gmail-15803D?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/FitoRifqi" target="_blank">
+  <a href="https://github.com/onlydayone" target="_blank">
     <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-0B1120?style=for-the-badge&logo=github&logoColor=22C55E" />
   </a>
 </p>
