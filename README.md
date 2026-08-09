@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <img src="./assets/header-banner.png" width="100%" alt="Header Banner" />
+  <img src="./assets/header-banner.svg" width="100%" alt="Header Banner" />
 </p>
 
 <p align="center">
@@ -274,5 +274,5 @@ const fito = {
 <br/>
 
 <p align="center">
-  <img src="./assets/footer-banner.png" width="100%" alt="Footer Banner" />
+  <img src="./assets/footer-banner.svg" width="100%" alt="Footer Banner" />
 </p>

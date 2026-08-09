@@ -1,0 +1,67 @@
+<svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+  .quote { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 16px; font-style: italic; fill: #A7F3D0; }
+  .credit { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 12px; fill: #22C55E; letter-spacing: 2px; }
+  .corner { stroke: #22C55E; stroke-width: 2; fill: none; opacity: .8; }
+  .glowbar { animation: pulse 2.6s ease-in-out infinite; }
+  .trace { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 20 200; animation: travel 4s linear infinite; }
+  @keyframes travel { to { stroke-dashoffset: -300; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  @keyframes scan { 0% { transform: translateY(-20px); } 100% { transform: translateY(200px); } }
+</style>
+
+<radialGradient id="bgGradF" cx="50%" cy="50%" r="90%">
+  <stop offset="0%" stop-color="#0B1120"/>
+  <stop offset="45%" stop-color="#071210"/>
+  <stop offset="100%" stop-color="#020503"/>
+</radialGradient>
+
+<radialGradient id="vignetteF" cx="50%" cy="50%" r="75%">
+  <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+</radialGradient>
+
+<linearGradient id="frameGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#22C55E"><animate attributeName="stop-color" values="#22C55E;#166534;#22C55E" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="100%" stop-color="#166534"><animate attributeName="stop-color" values="#166534;#22C55E;#166534" dur="6s" repeatCount="indefinite"/></stop>
+</linearGradient>
+
+<linearGradient id="scanGradF" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+
+<filter id="glowF" x="-60%" y="-60%" width="220%" height="220%">
+  <feGaussianBlur stdDeviation="3" result="blur"/>
+  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+
+<!-- Background -->
+<rect x="0" y="0" width="900" height="180" rx="18" fill="url(#bgGradF)"/>
+<rect x="0" y="0" width="900" height="180" rx="18" fill="url(#vignetteF)"/>
+<rect x="3" y="3" width="894" height="174" rx="16" fill="none" stroke="url(#frameGradF)" stroke-width="2" opacity="0.6"/>
+
+<!-- Corner accents -->
+<path class="corner" d="M24 48 L24 24 L48 24"/>
+<path class="corner" d="M876 48 L876 24 L852 24"/>
+<path class="corner" d="M24 132 L24 156 L48 156"/>
+<path class="corner" d="M876 132 L876 156 L852 156"/>
+
+<!-- Scan line -->
+<rect x="0" y="0" width="900" height="30" fill="url(#scanGradF)" style="animation: scan 6s linear infinite;"/>
+
+<!-- Glowing separator -->
+<rect class="glowbar" x="350" y="60" width="200" height="2" fill="#22C55E" filter="url(#glowF)"/>
+
+<!-- Quote -->
+<text x="450" y="100" text-anchor="middle" class="quote">"Saya masih belajar, masih membangun, dan akan terus berkembang."</text>
+
+<!-- Credit line -->
+<text x="450" y="140" text-anchor="middle" class="credit">— ONLYDAYONE —</text>
+
+<!-- Trace border -->
+<rect class="trace" x="3" y="3" width="894" height="174" rx="16" stroke="#22C55E"/>
+</svg>
