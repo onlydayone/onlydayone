@@ -1,30 +1,101 @@
 <svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+<!-- ponytail: pure SVG isometric equalizer wave + CSS keyframe physics; upgrade to Lottie/WebP if raymarched volumetric fog is needed -->
 <defs>
 <style>
-  .quote { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 16px; font-style: italic; fill: #A7F3D0; }
-  .credit { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 12px; fill: #22C55E; letter-spacing: 2px; }
-  .corner { stroke: #22C55E; stroke-width: 2; fill: none; opacity: .8; }
+  .quote { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 15px; font-style: italic; fill: #F0FDF4; letter-spacing: 0.5px; }
+  .credit-3d { font-family: 'Fira Code', 'Courier New', monospace; font-weight: 700; font-size: 12.5px; letter-spacing: 5px; }
+  .corner { stroke: #22C55E; stroke-width: 2; fill: none; opacity: .85; }
   .glowbar { animation: pulse 2.6s ease-in-out infinite; }
-  .trace { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 20 200; animation: travel 4s linear infinite; }
-  @keyframes travel { to { stroke-dashoffset: -300; } }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  .trace { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 30 220; animation: travel 4.5s linear infinite; }
+  .float-l { animation: floatL 4.8s ease-in-out infinite; }
+  .float-r { animation: floatR 5.2s ease-in-out infinite; }
+  .float-panel { animation: floatPanel 5s ease-in-out infinite; }
+
+  .p1 { animation: rise 5.5s linear infinite; animation-delay: 0s; }
+  .p2 { animation: rise 6.2s linear infinite; animation-delay: 1.2s; }
+  .p3 { animation: rise 5.8s linear infinite; animation-delay: 2.4s; }
+  .p4 { animation: rise 6.5s linear infinite; animation-delay: 0.7s; }
+  .p5 { animation: rise 5.4s linear infinite; animation-delay: 3.1s; }
+  .p6 { animation: rise 6.0s linear infinite; animation-delay: 4.2s; }
+
+  @keyframes travel { to { stroke-dashoffset: -250; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
   @keyframes scan { 0% { transform: translateY(-20px); } 100% { transform: translateY(200px); } }
+  @keyframes floatL { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-7px) rotate(-2deg); } }
+  @keyframes floatR { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-7px) rotate(2deg); } }
+  @keyframes floatPanel { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+
+  @keyframes rise {
+    0% { transform: translateY(30px); opacity: 0; }
+    20% { opacity: 0.85; }
+    80% { opacity: 0.5; }
+    100% { transform: translateY(-110px); opacity: 0; }
+  }
+
+  /* 3D Parallax Rain-Snow (Layered Depth) */
+  @keyframes snowSlowF {
+    0% { transform: translate(0, -15px); opacity: 0; }
+    15% { opacity: 0.35; }
+    85% { opacity: 0.35; }
+    100% { transform: translate(12px, 195px); opacity: 0; }
+  }
+  @keyframes snowMidF {
+    0% { transform: translate(0, -15px); opacity: 0; }
+    15% { opacity: 0.55; }
+    85% { opacity: 0.55; }
+    100% { transform: translate(20px, 195px); opacity: 0; }
+  }
+  @keyframes snowFastF {
+    0% { transform: translate(0, -15px); opacity: 0; }
+    15% { opacity: 0.8; }
+    85% { opacity: 0.8; }
+    100% { transform: translate(28px, 195px); opacity: 0; }
+  }
+  .fs-s1 { animation: snowSlowF 7.5s linear infinite; }
+  .fs-s2 { animation: snowSlowF 6.8s linear infinite; animation-delay: 2.2s; }
+  .fs-s3 { animation: snowSlowF 7.2s linear infinite; animation-delay: 4.5s; }
+
+  .fs-m1 { animation: snowMidF 5.2s linear infinite; }
+  .fs-m2 { animation: snowMidF 4.8s linear infinite; animation-delay: 1.5s; }
+  .fs-m3 { animation: snowMidF 5.5s linear infinite; animation-delay: 3.2s; }
+
+  .fs-f1 { animation: snowFastF 3.5s linear infinite; }
+  .fs-f2 { animation: snowFastF 3.0s linear infinite; animation-delay: 1.0s; }
+  .fs-f3 { animation: snowFastF 3.6s linear infinite; animation-delay: 2.2s; }
 </style>
 
-<radialGradient id="bgGradF" cx="50%" cy="50%" r="90%">
-  <stop offset="0%" stop-color="#0B1120"/>
-  <stop offset="45%" stop-color="#071210"/>
-  <stop offset="100%" stop-color="#020503"/>
+<clipPath id="cardClip">
+  <rect x="0" y="0" width="900" height="180" rx="18"/>
+</clipPath>
+
+<radialGradient id="bgGradF" cx="50%" cy="40%" r="90%">
+  <stop offset="0%" stop-color="#0B132B"/>
+  <stop offset="35%" stop-color="#071714"/>
+  <stop offset="75%" stop-color="#030A08"/>
+  <stop offset="100%" stop-color="#010403"/>
 </radialGradient>
 
 <radialGradient id="vignetteF" cx="50%" cy="50%" r="75%">
-  <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-  <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+  <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="100%" stop-color="#000000" stop-opacity="0.65"/>
+</radialGradient>
+
+<radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#22C55E" stop-opacity="0.25"/>
+  <stop offset="60%" stop-color="#15803D" stop-opacity="0.08"/>
+  <stop offset="100%" stop-color="#0B1120" stop-opacity="0"/>
 </radialGradient>
 
 <linearGradient id="frameGradF" x1="0%" y1="0%" x2="100%" y2="100%">
-  <stop offset="0%" stop-color="#22C55E"><animate attributeName="stop-color" values="#22C55E;#166534;#22C55E" dur="6s" repeatCount="indefinite"/></stop>
-  <stop offset="100%" stop-color="#166534"><animate attributeName="stop-color" values="#166534;#22C55E;#166534" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="0%" stop-color="#22C55E"/>
+  <stop offset="50%" stop-color="#15803D"/>
+  <stop offset="100%" stop-color="#22C55E"/>
+</linearGradient>
+
+<linearGradient id="topBevelF" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#22C55E" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#A7F3D0" stop-opacity="0.8"/>
+  <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
 </linearGradient>
 
 <linearGradient id="scanGradF" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -33,35 +104,144 @@
   <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
 
+<!-- 3D Column Faces -->
+<linearGradient id="colTop" x1="0%" y1="100%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#22C55E"/>
+  <stop offset="100%" stop-color="#86EFAC"/>
+</linearGradient>
+<linearGradient id="colLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#16A34A"/>
+  <stop offset="100%" stop-color="#0D5528"/>
+</linearGradient>
+<linearGradient id="colRight" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#0A4220"/>
+  <stop offset="100%" stop-color="#031F0E"/>
+</linearGradient>
+
+<!-- Floating Glassmorphic Panel -->
+<linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#0E2E1F" stop-opacity="0.75"/>
+  <stop offset="100%" stop-color="#05170F" stop-opacity="0.88"/>
+</linearGradient>
+
 <filter id="glowF" x="-60%" y="-60%" width="220%" height="220%">
   <feGaussianBlur stdDeviation="3" result="blur"/>
   <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
 </filter>
+<filter id="shadowF" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="6"/>
+</filter>
 </defs>
 
-<!-- Background -->
-<rect x="0" y="0" width="900" height="180" rx="18" fill="url(#bgGradF)"/>
-<rect x="0" y="0" width="900" height="180" rx="18" fill="url(#vignetteF)"/>
-<rect x="3" y="3" width="894" height="174" rx="16" fill="none" stroke="url(#frameGradF)" stroke-width="2" opacity="0.6"/>
+<!-- Main Container with Card Clipping -->
+<g clip-path="url(#cardClip)">
+  <!-- Card Background & Vignette -->
+  <rect x="0" y="0" width="900" height="180" fill="url(#bgGradF)"/>
+  <rect x="0" y="0" width="900" height="180" fill="url(#vignetteF)"/>
 
-<!-- Corner accents -->
+  <!-- Radial Core Glow -->
+  <ellipse cx="450" cy="90" rx="280" ry="65" fill="url(#centerGlow)"/>
+
+  <!-- ═══ 3D PARALLAX RAIN-SNOW EFFECT ═══ -->
+  <!-- Layer 1: Distant micro snow dots -->
+  <g fill="#6EE7B7">
+    <circle class="fs-s1" cx="80" cy="0" r="1.1"/>
+    <circle class="fs-s2" cx="220" cy="0" r="0.9"/>
+    <circle class="fs-s3" cx="370" cy="0" r="1.1"/>
+    <circle class="fs-s1" cx="520" cy="0" r="0.9" style="animation-delay: 3.8s;"/>
+    <circle class="fs-s2" cx="670" cy="0" r="1.1" style="animation-delay: 1.2s;"/>
+    <circle class="fs-s3" cx="820" cy="0" r="0.9" style="animation-delay: 5s;"/>
+    <circle class="fs-s1" cx="150" cy="0" r="1" style="animation-delay: 2.5s;"/>
+  </g>
+  <!-- Layer 2: Midground floating diamond crystals -->
+  <g fill="#34D399" filter="url(#glowF)">
+    <polygon class="fs-m1" points="140,-2 143,0 140,2 137,0"/>
+    <polygon class="fs-m2" points="300,-2 303,0 300,2 297,0"/>
+    <polygon class="fs-m3" points="470,-2 473,0 470,2 467,0"/>
+    <polygon class="fs-m1" points="630,-2 633,0 630,2 627,0" style="animation-delay: 2.5s;"/>
+    <polygon class="fs-m2" points="760,-2 763,0 760,2 757,0" style="animation-delay: 3.8s;"/>
+    <polygon class="fs-m3" points="850,-2 853,0 850,2 847,0" style="animation-delay: 1s;"/>
+  </g>
+  <!-- Layer 3: Foreground delicate glowing rain streaks -->
+  <g fill="#F0FDF4" opacity="0.8">
+    <rect class="fs-f1" x="110" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 110 -6)"/>
+    <rect class="fs-f2" x="260" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 260 -6)"/>
+    <rect class="fs-f3" x="420" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 420 -6)"/>
+    <rect class="fs-f1" x="580" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 580 -6)" style="animation-delay: 1.8s;"/>
+    <rect class="fs-f2" x="720" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 720 -6)" style="animation-delay: 2.5s;"/>
+    <rect class="fs-f3" x="830" y="-6" width="1.2" height="5" rx="0.6" transform="rotate(10 830 -6)" style="animation-delay: 0.6s;"/>
+  </g>
+
+  <!-- ═══ RISING 3D PARTICLES ═══ -->
+  <g fill="#4ADE80" filter="url(#glowF)">
+    <polygon class="p1" points="200,156 204,160 200,164 196,160"/>
+    <polygon class="p2" points="330,161 334,165 330,169 326,165"/>
+    <polygon class="p3" points="440,166 444,170 440,174 436,170"/>
+    <polygon class="p4" points="560,156 564,160 560,164 556,160"/>
+    <polygon class="p5" points="680,161 684,165 680,169 676,165"/>
+    <polygon class="p6" points="280,166 284,170 280,174 276,170"/>
+  </g>
+
+  <!-- ═══ FLOATING MINI 3D HERO CUBES ═══ -->
+  <!-- Left Cube (115, 58) -->
+  <g class="float-l">
+    <ellipse cx="115" cy="74" rx="14" ry="5" fill="#000000" opacity="0.4" filter="url(#shadowF)"/>
+    <polygon points="115,40 127,46 115,52 103,46" fill="url(#colTop)"/>
+    <polygon points="103,46 115,52 115,68 103,62" fill="url(#colLeft)"/>
+    <polygon points="115,52 127,46 127,62 115,68" fill="url(#colRight)"/>
+    <line x1="103" y1="46" x2="115" y2="52" stroke="#A7F3D0" stroke-width="0.8" opacity="0.8"/>
+    <line x1="115" y1="52" x2="115" y2="68" stroke="#4ADE80" stroke-width="0.8" opacity="0.7"/>
+  </g>
+
+  <!-- Right Cube (785, 58) -->
+  <g class="float-r">
+    <ellipse cx="785" cy="74" rx="14" ry="5" fill="#000000" opacity="0.4" filter="url(#shadowF)"/>
+    <polygon points="785,40 797,46 785,52 773,46" fill="url(#colTop)"/>
+    <polygon points="773,46 785,52 785,68 773,62" fill="url(#colLeft)"/>
+    <polygon points="785,52 797,46 797,62 785,68" fill="url(#colRight)"/>
+    <line x1="773" y1="46" x2="785" y2="52" stroke="#A7F3D0" stroke-width="0.8" opacity="0.8"/>
+    <line x1="785" y1="52" x2="785" y2="68" stroke="#4ADE80" stroke-width="0.8" opacity="0.7"/>
+  </g>
+
+  <!-- ═══ 3D FLOATING GLASSMORHPIC QUOTE PANEL ═══ -->
+  <g class="float-panel">
+    <!-- Cast Shadow -->
+    <rect x="170" y="38" width="560" height="104" rx="14" fill="#000000" opacity="0.55" filter="url(#shadowF)"/>
+    <!-- Extrusion Base -->
+    <rect x="170" y="36" width="560" height="104" rx="14" fill="#062E17" opacity="0.6"/>
+    <!-- Glass Surface -->
+    <rect x="170" y="33" width="560" height="104" rx="14" fill="url(#glassGrad)" stroke="#22C55E" stroke-opacity="0.45" stroke-width="1.2"/>
+    <!-- Top Highlight Bevel Edge -->
+    <line x1="186" y1="34" x2="714" y2="34" stroke="#A7F3D0" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Glowing Separator -->
+    <rect class="glowbar" x="380" y="56" width="140" height="2" rx="1" fill="#22C55E" filter="url(#glowF)"/>
+
+    <!-- Quote Text -->
+    <text x="450" y="89" text-anchor="middle" class="quote">"Saya masih belajar, masih membangun, dan akan terus berkembang."</text>
+
+    <!-- 3D Extruded Credit Typography -->
+    <g>
+      <text x="450" y="122" text-anchor="middle" class="credit-3d" fill="#021C0D">― FITO RIFQI ―</text>
+      <text x="450" y="121" text-anchor="middle" class="credit-3d" fill="#0B5E2C">― FITO RIFQI ―</text>
+      <text x="450" y="120" text-anchor="middle" class="credit-3d" fill="#22C55E" filter="url(#glowF)">― FITO RIFQI ―</text>
+    </g>
+  </g>
+
+  <!-- Scan Line -->
+  <rect x="0" y="0" width="900" height="30" fill="url(#scanGradF)" style="animation: scan 6s linear infinite;"/>
+</g>
+
+<!-- Outer 3D Bevel Frame -->
+<rect x="3" y="3" width="894" height="174" rx="16" fill="none" stroke="url(#frameGradF)" stroke-width="1.8" opacity="0.6"/>
+<path d="M 24 3 L 876 3" stroke="url(#topBevelF)" stroke-width="2"/>
+
+<!-- Tech Corner Brackets -->
 <path class="corner" d="M24 48 L24 24 L48 24"/>
 <path class="corner" d="M876 48 L876 24 L852 24"/>
 <path class="corner" d="M24 132 L24 156 L48 156"/>
 <path class="corner" d="M876 132 L876 156 L852 156"/>
 
-<!-- Scan line -->
-<rect x="0" y="0" width="900" height="30" fill="url(#scanGradF)" style="animation: scan 6s linear infinite;"/>
-
-<!-- Glowing separator -->
-<rect class="glowbar" x="350" y="60" width="200" height="2" fill="#22C55E" filter="url(#glowF)"/>
-
-<!-- Quote -->
-<text x="450" y="100" text-anchor="middle" class="quote">"Saya masih belajar, masih membangun, dan akan terus berkembang."</text>
-
-<!-- Credit line -->
-<text x="450" y="140" text-anchor="middle" class="credit">— FITO RIFQI —</text>
-
-<!-- Trace border -->
+<!-- Trace Border Animation -->
 <rect class="trace" x="3" y="3" width="894" height="174" rx="16" stroke="#22C55E"/>
 </svg>
