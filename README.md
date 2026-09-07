@@ -41,23 +41,21 @@
 
 ```js
 const fito = {
-    name: "Fito Rifqi Dwi Fatoni",
-    alias: "onlydayone",
-    role: "Mobile & Web Developer",
-    location: "Indonesia 🇮🇩",
-    focus: ["SkillBantuin", "JavaLan"],
-    learning: ["Flutter", "Dart",
-               "IoT", "Odoo ERP"],
-    interests: ["Web Dev", "Mobile",
-                "Backend", "UI/UX"],
-    motto: "Build, learn, repeat 🚀"
+  name: "Fito Rifqi Dwi Fatoni",
+  alias: "onlydayone",
+  role: "Mobile & Web Developer",
+  location: "Indonesia 🇮🇩",
+  focus: ["SkillBantuin", "JavaLan"],
+  learning: ["Flutter", "Dart", "IoT", "Odoo ERP"],
+  interests: ["Web Dev", "Mobile", "Backend", "UI/UX"],
+  motto: "Build, learn, repeat 🚀",
 };
 ```
 
 </td>
 <td align="center" width="50%">
 
-<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="85%" alt="Coding GIF" />
+<img src="https://github.com/user-attachments/assets/67ca4b7a-3b75-44a7-9fcd-2465625b66f3" width="75%" alt="Coding GIF" />
 
 </td>
 </tr>
@@ -132,11 +130,8 @@ const fito = {
 <h2> 📈 Statistik GitHub</h2>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/onlydayone/onlydayone/main/profile-summary-card-output/dark/0-profile-details.svg" width="100%" alt="Profile Details" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=22C55E&currStreakLabel=22C55E&currStreakNum=22C55E&sideNums=22C55E&sideLabels=22C55E&dates=22C55E" width="100%" alt="GitHub Streak" />
+  <img src="./profile-summary-card-output/dark/0-profile-details.svg" width="49%" alt="Profile Details" />
+  <img src="https://streak-stats.demolab.com?user=onlydayone&hide_border=true&background=0B1120&ring=22C55E&fire=22C55E&currStreakLabel=A7F3D0&currStreakNum=22C55E&sideNums=22C55E&sideLabels=94A3B8&dates=94A3B8" width="49%" alt="GitHub Streak" />
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -144,7 +139,7 @@ const fito = {
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D Contribution Graph" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="85%" alt="3D Contribution Graph" />
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -160,21 +155,21 @@ const fito = {
 <tr>
 <td align="center" width="33%">
 <a href="https://www.linkedin.com/in/fito-rifqi-a904a933b/" target="_blank">
-<img src="https://img.shields.io/badge/LinkedIn-22C55E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+<img src="https://img.shields.io/badge/LinkedIn-22C55E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B1120" alt="LinkedIn" />
 </a>
 <br/><br/>
 <sub>Fito Rifqi</sub>
 </td>
 <td align="center" width="33%">
 <a href="mailto:fitordf@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-22C55E?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+<img src="https://img.shields.io/badge/Gmail-22C55E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B1120" alt="Email" />
 </a>
 <br/><br/>
 <sub>fitordf@gmail.com</sub>
 </td>
 <td align="center" width="33%">
 <a href="https://github.com/onlydayone" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+<img src="https://img.shields.io/badge/GitHub-22C55E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1120" alt="GitHub" />
 </a>
 <br/><br/>
 <sub>@onlydayone</sub>
@@ -190,5 +185,5 @@ const fito = {
 <br/>
 
 <p align="center">
-  <img src="./assets/footer-banner.svg" width="100%" alt="Footer Banner" />
+  <img src="./assets/footer-banner.svg" width="85%" alt="Footer Banner" />
 </p>
