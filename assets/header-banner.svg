@@ -1,21 +1,32 @@
 <svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+<!-- ponytail: pure SVG isometric projection + CSS keyframes; upgrade to pre-rendered 3D WebP/Lottie if complex raymarching is needed -->
 <defs>
 <style>
-  .name { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 800; font-size: 54px; letter-spacing: 6px; fill: #ffffff; }
-  .sub { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 1px; fill: #22C55E; }
-  .ach { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 16px; fill: #A7F3D0; text-anchor: middle; }
-  .status-text { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px; fill: #ffffff; }
-  .corner { stroke: #22C55E; stroke-width: 2; fill: none; opacity: .8; }
+  .name-3d { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 52px; letter-spacing: 7px; }
+  .sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 2.5px; fill: #34D399; }
+  .ach { font-family: 'Fira Code', 'Courier New', monospace; font-weight: 600; font-size: 15px; fill: #A7F3D0; text-anchor: middle; }
+  .status-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px; fill: #ffffff; }
+  .corner { stroke: #22C55E; stroke-width: 2; fill: none; opacity: .85; }
   .glowbar { animation: pulse 2.6s ease-in-out infinite; }
-  .trace { fill: none; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 30 250; animation: travel 3.2s linear infinite; }
-  @keyframes travel { to { stroke-dashoffset: -400; } }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  .trace { fill: none; stroke-linecap: round; stroke-dasharray: 40 280; animation: travel 3.5s linear infinite; }
+  .float-l1 { animation: floatL1 5s ease-in-out infinite; }
+  .float-l2 { animation: floatL2 6s ease-in-out infinite; }
+  .float-r1 { animation: floatR1 5.2s ease-in-out infinite; }
+  .float-r2 { animation: floatR2 6.5s ease-in-out infinite; }
+  .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+
+  @keyframes travel { to { stroke-dashoffset: -320; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
   @keyframes scan { 0% { transform: translateY(-40px); } 100% { transform: translateY(380px); } }
+  @keyframes floatL1 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-10px) rotate(-1.5deg); } }
+  @keyframes floatL2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
+  @keyframes floatR1 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-11px) rotate(2deg); } }
+  @keyframes floatR2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
   @keyframes glitch {
-    0%, 92%, 100% { transform: translate(0,0); opacity: 0; }
-    93% { transform: translate(-3px,1px); opacity: .7; }
-    95% { transform: translate(3px,-1px); opacity: .7; }
-    97% { transform: translate(-2px,0); opacity: .5; }
+    0%, 93%, 100% { transform: translate(0,0); opacity: 0; }
+    94% { transform: translate(-3px,1px); opacity: .7; }
+    96% { transform: translate(3px,-1px); opacity: .7; }
+    98% { transform: translate(-2px,0); opacity: .5; }
   }
   @keyframes fade1 { 0%,5%{opacity:0} 8%{opacity:1} 28%{opacity:1} 31%{opacity:0} 100%{opacity:0} }
   @keyframes fade2 { 0%,34%{opacity:0} 37%{opacity:1} 61%{opacity:1} 64%{opacity:0} 100%{opacity:0} }
@@ -23,75 +34,292 @@
   .line1 { animation: fade1 10s infinite; }
   .line2 { animation: fade2 10s infinite; }
   .line3 { animation: fade3 10s infinite; }
+
+  /* 3D Parallax Rain-Snow (Layered Depth) */
+  @keyframes snowSlow {
+    0% { transform: translate(0, -25px); opacity: 0; }
+    15% { opacity: 0.35; }
+    85% { opacity: 0.35; }
+    100% { transform: translate(15px, 385px); opacity: 0; }
+  }
+  @keyframes snowMid {
+    0% { transform: translate(0, -25px); opacity: 0; }
+    15% { opacity: 0.55; }
+    85% { opacity: 0.55; }
+    100% { transform: translate(25px, 385px); opacity: 0; }
+  }
+  @keyframes snowFast {
+    0% { transform: translate(0, -25px); opacity: 0; }
+    15% { opacity: 0.8; }
+    85% { opacity: 0.8; }
+    100% { transform: translate(35px, 385px); opacity: 0; }
+  }
+  .sn-s1 { animation: snowSlow 9.5s linear infinite; }
+  .sn-s2 { animation: snowSlow 8.4s linear infinite; animation-delay: 2.8s; }
+  .sn-s3 { animation: snowSlow 9.0s linear infinite; animation-delay: 5.2s; }
+  .sn-s4 { animation: snowSlow 8.8s linear infinite; animation-delay: 4.1s; }
+
+  .sn-m1 { animation: snowMid 6.2s linear infinite; }
+  .sn-m2 { animation: snowMid 5.8s linear infinite; animation-delay: 1.8s; }
+  .sn-m3 { animation: snowMid 6.5s linear infinite; animation-delay: 3.6s; }
+  .sn-m4 { animation: snowMid 6.0s linear infinite; animation-delay: 4.9s; }
+
+  .sn-f1 { animation: snowFast 4.2s linear infinite; }
+  .sn-f2 { animation: snowFast 3.7s linear infinite; animation-delay: 1.3s; }
+  .sn-f3 { animation: snowFast 4.5s linear infinite; animation-delay: 2.7s; }
 </style>
 
+<clipPath id="cardClipH">
+  <rect x="0" y="0" width="900" height="360" rx="18"/>
+</clipPath>
+
+<!-- Gradients -->
 <radialGradient id="bgGrad" cx="50%" cy="20%" r="90%">
-  <stop offset="0%" stop-color="#0B1120"/>
-  <stop offset="45%" stop-color="#071210"/>
-  <stop offset="100%" stop-color="#020503"/>
+  <stop offset="0%" stop-color="#0B132B"/>
+  <stop offset="35%" stop-color="#071714"/>
+  <stop offset="70%" stop-color="#030A08"/>
+  <stop offset="100%" stop-color="#010403"/>
 </radialGradient>
 
 <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
-  <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-  <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+  <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="100%" stop-color="#000000" stop-opacity="0.65"/>
 </radialGradient>
 
 <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-  <stop offset="0%" stop-color="#22C55E"><animate attributeName="stop-color" values="#22C55E;#166534;#22C55E" dur="6s" repeatCount="indefinite"/></stop>
-  <stop offset="100%" stop-color="#166534"><animate attributeName="stop-color" values="#166534;#22C55E;#166534" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="0%" stop-color="#22C55E"/>
+  <stop offset="50%" stop-color="#15803D"/>
+  <stop offset="100%" stop-color="#22C55E"/>
+</linearGradient>
+
+<linearGradient id="topBevel" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#22C55E" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#A7F3D0" stop-opacity="0.8"/>
+  <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
 </linearGradient>
 
 <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
   <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-  <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04"/>
   <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
 
+<linearGradient id="nameFaceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#FFFFFF"/>
+  <stop offset="65%" stop-color="#F0FDF4"/>
+  <stop offset="100%" stop-color="#BBF7D0"/>
+</linearGradient>
+
+<linearGradient id="cubeTop" x1="0%" y1="100%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#22C55E"/>
+  <stop offset="100%" stop-color="#86EFAC"/>
+</linearGradient>
+<linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#15803D"/>
+  <stop offset="100%" stop-color="#0F5128"/>
+</linearGradient>
+<linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#0A3C1D"/>
+  <stop offset="100%" stop-color="#031F0E"/>
+</linearGradient>
+
+<linearGradient id="btnPlate" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#0D2818"/>
+  <stop offset="100%" stop-color="#05130B"/>
+</linearGradient>
+
+<!-- Filters -->
 <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
   <feGaussianBlur stdDeviation="4" result="blur"/>
   <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
 </filter>
 <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
-  <feGaussianBlur stdDeviation="10" result="blur"/>
-  <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  <feGaussianBlur stdDeviation="12" result="blur"/>
+  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
 </filter>
+<filter id="drop3D" x="-40%" y="-40%" width="180%" height="200%">
+  <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#22C55E" flood-opacity="0.35"/>
+</filter>
+<filter id="shadowBlur" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="5"/>
+</filter>
+<linearGradient id="floorFade" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="35%" stop-color="#000000" stop-opacity="0.8"/>
+  <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+</linearGradient>
+<mask id="floorMask">
+  <rect x="0" y="190" width="900" height="170" fill="url(#floorFade)"/>
+</mask>
 </defs>
 
-<!-- Background -->
+<!-- Card Base & Atmosphere -->
 <rect x="0" y="0" width="900" height="360" rx="18" fill="url(#bgGrad)"/>
 <rect x="0" y="0" width="900" height="360" rx="18" fill="url(#vignette)"/>
-<rect x="3" y="3" width="894" height="354" rx="16" fill="none" stroke="url(#frameGrad)" stroke-width="2" opacity="0.6"/>
 
-<!-- Corner accents -->
+<!-- 3D Perspective Grid Floor -->
+<g mask="url(#floorMask)" stroke="#22C55E" stroke-width="0.75" opacity="0.32">
+  <!-- Perspective lines converging to center horizon (450, 190) -->
+  <line x1="450" y1="190" x2="-60" y2="360"/>
+  <line x1="450" y1="190" x2="70" y2="360"/>
+  <line x1="450" y1="190" x2="190" y2="360"/>
+  <line x1="450" y1="190" x2="300" y2="360"/>
+  <line x1="450" y1="190" x2="400" y2="360"/>
+  <line x1="450" y1="190" x2="450" y2="360"/>
+  <line x1="450" y1="190" x2="500" y2="360"/>
+  <line x1="450" y1="190" x2="600" y2="360"/>
+  <line x1="450" y1="190" x2="710" y2="360"/>
+  <line x1="450" y1="190" x2="830" y2="360"/>
+  <line x1="450" y1="190" x2="960" y2="360"/>
+  <!-- Receding horizontal grid lines -->
+  <line x1="0" y1="210" x2="900" y2="210"/>
+  <line x1="0" y1="225" x2="900" y2="225"/>
+  <line x1="0" y1="245" x2="900" y2="245"/>
+  <line x1="0" y1="272" x2="900" y2="272"/>
+  <line x1="0" y1="308" x2="900" y2="308"/>
+  <line x1="0" y1="352" x2="900" y2="352"/>
+</g>
+
+<!-- Outer 3D Bevel Frame -->
+<rect x="3" y="3" width="894" height="354" rx="16" fill="none" stroke="url(#frameGrad)" stroke-width="1.8" opacity="0.6"/>
+<path d="M 24 3 L 876 3" stroke="url(#topBevel)" stroke-width="2"/>
+
+<!-- Tech Corner Brackets -->
 <path class="corner" d="M24 55 L24 24 L55 24"/>
 <path class="corner" d="M876 55 L876 24 L845 24"/>
 <path class="corner" d="M24 305 L24 336 L55 336"/>
 <path class="corner" d="M876 305 L876 336 L845 336"/>
 
 <!-- Scan line -->
-<rect x="0" y="0" width="900" height="40" fill="url(#scanGrad)" style="animation: scan 6s linear infinite;"/>
+<rect x="0" y="0" width="900" height="36" fill="url(#scanGrad)" class="scan"/>
 
-<!-- Name with glow + glitch -->
-<text x="450" y="110" text-anchor="middle" class="name" filter="url(#softglow)">FITO RIFQI</text>
-<text x="447" y="110" text-anchor="middle" class="name" fill="#22C55E" style="animation: glitch 7s infinite;">FITO RIFQI</text>
-<text x="453" y="110" text-anchor="middle" class="name" fill="#166534" style="animation: glitch 7s infinite .1s;">FITO RIFQI</text>
+<!-- ═══ 3D PARALLAX RAIN-SNOW EFFECT (VOLUMETRIC DRIFT) ═══ -->
+<g clip-path="url(#cardClipH)">
+  <!-- Layer 1: Distant subtle snow particles -->
+  <g fill="#6EE7B7">
+    <circle class="sn-s1" cx="95" cy="0" r="1.2"/>
+    <circle class="sn-s2" cx="210" cy="0" r="1"/>
+    <circle class="sn-s3" cx="360" cy="0" r="1.3"/>
+    <circle class="sn-s4" cx="510" cy="0" r="1"/>
+    <circle class="sn-s1" cx="640" cy="0" r="1.2" style="animation-delay: 4.2s;"/>
+    <circle class="sn-s2" cx="770" cy="0" r="1" style="animation-delay: 6.1s;"/>
+    <circle class="sn-s3" cx="860" cy="0" r="1.2" style="animation-delay: 1.5s;"/>
+    <circle class="sn-s4" cx="150" cy="0" r="1" style="animation-delay: 7s;"/>
+    <circle class="sn-s2" cx="430" cy="0" r="1.1" style="animation-delay: 3.3s;"/>
+  </g>
+  <!-- Layer 2: Midground floating diamond crystals -->
+  <g fill="#34D399" filter="url(#glow)">
+    <polygon class="sn-m1" points="160,-3 163,0 160,3 157,0"/>
+    <polygon class="sn-m2" points="290,-3 293,0 290,3 287,0"/>
+    <polygon class="sn-m3" points="480,-3 483,0 480,3 477,0"/>
+    <polygon class="sn-m4" points="620,-3 623,0 620,3 617,0"/>
+    <polygon class="sn-m1" points="740,-3 743,0 740,3 737,0" style="animation-delay: 3s;"/>
+    <polygon class="sn-m2" points="830,-3 833,0 830,3 827,0" style="animation-delay: 4.5s;"/>
+    <polygon class="sn-m3" points="60,-3 63,0 60,3 57,0" style="animation-delay: 2.2s;"/>
+  </g>
+  <!-- Layer 3: Foreground subtle glowing streaks -->
+  <g fill="#F0FDF4" opacity="0.8">
+    <rect class="sn-f1" x="120" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 120 -8)"/>
+    <rect class="sn-f2" x="250" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 250 -8)"/>
+    <rect class="sn-f3" x="410" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 410 -8)"/>
+    <rect class="sn-f1" x="580" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 580 -8)" style="animation-delay: 2s;"/>
+    <rect class="sn-f2" x="710" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 710 -8)" style="animation-delay: 3.1s;"/>
+    <rect class="sn-f3" x="840" y="-8" width="1.5" height="6" rx="0.75" transform="rotate(12 840 -8)" style="animation-delay: 0.8s;"/>
+  </g>
+</g>
 
-<!-- Subtitle -->
-<text x="450" y="148" text-anchor="middle" class="sub">MOBILE &amp; WEB DEVELOPER · IOT EXPLORER · LIFELONG LEARNER</text>
+<!-- ═══ 3D FLOATING ISOMETRIC ELEMENTS (LEFT) ═══ -->
+<!-- Mini Background Cube -->
+<g class="float-l2">
+  <ellipse cx="85" cy="148" rx="20" ry="7" fill="#000000" opacity="0.4" filter="url(#shadowBlur)"/>
+  <polygon points="85,106 103,116 85,126 67,116" fill="url(#cubeTop)"/>
+  <polygon points="67,116 85,126 85,142 67,132" fill="url(#cubeLeft)"/>
+  <polygon points="85,126 103,116 103,132 85,142" fill="url(#cubeRight)"/>
+  <polygon points="85,106 103,116 85,126 67,116" fill="none" stroke="#86EFAC" stroke-width="0.6" opacity="0.7"/>
+</g>
+<!-- Main Foreground Cube -->
+<g class="float-l1">
+  <ellipse cx="112" cy="242" rx="34" ry="11" fill="#000000" opacity="0.5" filter="url(#shadowBlur)"/>
+  <!-- Top Face -->
+  <polygon points="112,166 144,184 112,202 80,184" fill="url(#cubeTop)"/>
+  <!-- Left Face -->
+  <polygon points="80,184 112,202 112,234 80,216" fill="url(#cubeLeft)"/>
+  <!-- Right Face -->
+  <polygon points="112,202 144,184 144,216 112,234" fill="url(#cubeRight)"/>
+  <!-- Highlights -->
+  <line x1="80" y1="184" x2="112" y2="202" stroke="#86EFAC" stroke-width="1.2" opacity="0.9"/>
+  <line x1="112" y1="202" x2="144" y2="184" stroke="#86EFAC" stroke-width="0.8" opacity="0.6"/>
+  <line x1="112" y1="202" x2="112" y2="234" stroke="#4ADE80" stroke-width="1" opacity="0.7"/>
+</g>
 
-<!-- Glowing bar -->
-<rect class="glowbar" x="380" y="166" width="140" height="2.5" fill="#22C55E" filter="url(#glow)"/>
+<!-- ═══ 3D FLOATING ISOMETRIC ELEMENTS (RIGHT) ═══ -->
+<!-- Mini Background Cube -->
+<g class="float-r2">
+  <ellipse cx="815" cy="148" rx="20" ry="7" fill="#000000" opacity="0.4" filter="url(#shadowBlur)"/>
+  <polygon points="815,106 833,116 815,126 797,116" fill="url(#cubeTop)"/>
+  <polygon points="797,116 815,126 815,142 797,132" fill="url(#cubeLeft)"/>
+  <polygon points="815,126 833,116 833,132 815,142" fill="url(#cubeRight)"/>
+  <polygon points="815,106 833,116 815,126 797,116" fill="none" stroke="#86EFAC" stroke-width="0.6" opacity="0.7"/>
+</g>
+<!-- Main Foreground Cube -->
+<g class="float-r1">
+  <ellipse cx="788" cy="242" rx="34" ry="11" fill="#000000" opacity="0.5" filter="url(#shadowBlur)"/>
+  <!-- Top Face -->
+  <polygon points="788,166 820,184 788,202 756,184" fill="url(#cubeTop)"/>
+  <!-- Left Face -->
+  <polygon points="756,184 788,202 788,234 756,216" fill="url(#cubeLeft)"/>
+  <!-- Right Face -->
+  <polygon points="788,202 820,184 820,216 788,234" fill="url(#cubeRight)"/>
+  <!-- Highlights -->
+  <line x1="756" y1="184" x2="788" y2="202" stroke="#86EFAC" stroke-width="1.2" opacity="0.9"/>
+  <line x1="788" y1="202" x2="820" y2="184" stroke="#86EFAC" stroke-width="0.8" opacity="0.6"/>
+  <line x1="788" y1="202" x2="788" y2="234" stroke="#4ADE80" stroke-width="1" opacity="0.7"/>
+</g>
 
-<!-- Fading lines (one at a time, no overlap) -->
-<text x="450" y="220" class="ach line1">📱 Building — SkillBantuin App</text>
-<text x="450" y="220" class="ach line2">💬 Developing — JavaLan Messenger</text>
-<text x="450" y="220" class="ach line3">🔬 Exploring — IoT &amp; Arduino Projects</text>
-
-<!-- Open to collaborate button -->
+<!-- ═══ 3D EXTRUDED TYPOGRAPHY ═══ -->
 <g>
-<rect x="318" y="260" width="264" height="42" rx="10" fill="#0B1120" stroke="#22C55E" stroke-width="1.4" filter="url(#glow)"/>
-<rect class="trace" x="318" y="260" width="264" height="42" rx="10" stroke="#22C55E"/>
-<circle cx="340" cy="281" r="4" fill="#22c55e"/>
-<text x="454" y="286" text-anchor="middle" class="status-text">OPEN TO COLLABORATE</text>
+  <!-- Ambient Shadow -->
+  <text x="450" y="119" text-anchor="middle" class="name-3d" fill="#02140A" opacity="0.85">FITO RIFQI</text>
+  <!-- Extrusion Layers (Bottom to Top) -->
+  <text x="450" y="116" text-anchor="middle" class="name-3d" fill="#063E1C">FITO RIFQI</text>
+  <text x="450" y="114" text-anchor="middle" class="name-3d" fill="#0B5E2C">FITO RIFQI</text>
+  <text x="450" y="112" text-anchor="middle" class="name-3d" fill="#15803D">FITO RIFQI</text>
+  <text x="450" y="110" text-anchor="middle" class="name-3d" fill="#16A34A">FITO RIFQI</text>
+  <!-- Front Surface with Glow + Bevel stroke -->
+  <text x="450" y="108" text-anchor="middle" class="name-3d" fill="url(#nameFaceGrad)" stroke="#DCFCE7" stroke-width="0.6" filter="url(#drop3D)">FITO RIFQI</text>
+  <!-- Glitch overlay -->
+  <text x="447" y="108" text-anchor="middle" class="name-3d" fill="#22C55E" style="animation: glitch 7s infinite;">FITO RIFQI</text>
+  <text x="453" y="108" text-anchor="middle" class="name-3d" fill="#166534" style="animation: glitch 7s infinite .1s;">FITO RIFQI</text>
+</g>
+
+<!-- Subtitle with Depth -->
+<text x="450" y="146" text-anchor="middle" class="sub" filter="url(#glow)">MOBILE &amp; WEB DEVELOPER · IOT EXPLORER · LIFELONG LEARNER</text>
+
+<!-- 3D Glowing Separator Prism -->
+<g>
+  <ellipse cx="450" cy="166" rx="90" ry="4" fill="#22C55E" opacity="0.3" filter="url(#shadowBlur)"/>
+  <rect class="glowbar" x="375" y="164" width="150" height="2.5" rx="1.2" fill="#22C55E" filter="url(#glow)"/>
+</g>
+
+<!-- Dynamic Status Lines -->
+<text x="450" y="218" class="ach line1">📱 Building — SkillBantuin App</text>
+<text x="450" y="218" class="ach line2">💬 Developing — JavaLan Messenger</text>
+<text x="450" y="218" class="ach line3">🔬 Exploring — IoT &amp; Arduino Projects</text>
+
+<!-- ═══ 3D BEVELED COLLABORATION BUTTON ═══ -->
+<g>
+  <!-- Cast Shadow -->
+  <rect x="318" y="266" width="264" height="42" rx="10" fill="#000000" opacity="0.55" filter="url(#shadowBlur)"/>
+  <!-- 3D Extruded Base -->
+  <rect x="318" y="262" width="264" height="42" rx="10" fill="#09351C"/>
+  <!-- Front Surface Plate -->
+  <rect x="318" y="258" width="264" height="42" rx="10" fill="url(#btnPlate)" stroke="#22C55E" stroke-width="1.4"/>
+  <!-- Top Highlight Edge -->
+  <line x1="328" y1="259" x2="572" y2="259" stroke="#A7F3D0" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Animated Border Pulse -->
+  <rect class="trace" x="318" y="258" width="264" height="42" rx="10" stroke="#86EFAC" stroke-width="1.4"/>
+  <!-- Status Indicator Dot -->
+  <circle cx="342" cy="279" r="4.5" fill="#22C55E" class="pulse-dot" filter="url(#glow)"/>
+  <text x="456" y="284" text-anchor="middle" class="status-text">OPEN TO COLLABORATE</text>
 </g>
 </svg>
